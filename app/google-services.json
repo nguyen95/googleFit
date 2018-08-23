@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "203453233146",
+    "firebase_url": "https://healthcaresimply.firebaseio.com",
+    "project_id": "healthcaresimply",
+    "storage_bucket": "healthcaresimply.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203453233146:android:afe068a0163e96d2",
+        "android_client_info": {
+          "package_name": "com.example.trungnguyen.healthcare2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203453233146-kj49scj6h3036u24npk58arltglf5e6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trungnguyen.healthcare2",
+            "certificate_hash": "5783464793624166cfbd013df9347494dc945933"
+          }
+        },
+        {
+          "client_id": "203453233146-332f3v5sg4iieerh6cgkmofhdfehnuct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCba7JNI3dROLhNOopA5gSyeQPkvt8yG6Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203453233146-332f3v5sg4iieerh6cgkmofhdfehnuct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
