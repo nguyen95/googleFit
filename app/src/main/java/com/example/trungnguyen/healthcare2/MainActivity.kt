@@ -1,28 +1,18 @@
 package com.example.trungnguyen.healthcare2
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.fitness.Fitness
+import com.google.android.gms.fitness.FitnessOptions
 import com.google.android.gms.fitness.data.DataSet
 import com.google.android.gms.fitness.data.DataType
 import com.google.android.gms.fitness.request.DataReadRequest
 import timber.log.Timber.e
-import java.text.DateFormat.getDateInstance
 import java.text.DateFormat.getTimeInstance
-import java.util.Date
-import java.util.Calendar
+import java.util.*
 import java.util.concurrent.TimeUnit
-import android.content.Intent
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import android.R.attr.data
-import com.google.android.gms.tasks.Task
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.fitness.FitnessOptions
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
-import timber.log.Timber.i
 
 
 class MainActivity : AppCompatActivity() {
@@ -111,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             e("\tStart: ${dateFormat.format(dp.getStartTime(TimeUnit.MILLISECONDS))}")
             e("\tEnd: ${dateFormat.format(dp.getEndTime(TimeUnit.MILLISECONDS))}")
             for (field in dp.dataType.fields) {
-                e("\tField: ${field.name} Value: ${dp.getValue(field)}")
+                e("\tField: ${field.name}  Value: ${dp.getValue(field)}")
             }
         }
     }

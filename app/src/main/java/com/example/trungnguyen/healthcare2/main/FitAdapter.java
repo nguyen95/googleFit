@@ -3,7 +3,6 @@ package com.example.trungnguyen.healthcare2.main;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +14,9 @@ import com.google.android.gms.fitness.data.DataSet;
 import com.google.android.gms.fitness.data.Field;
 import com.google.android.gms.fitness.data.Value;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
-import static java.text.DateFormat.getTimeInstance;
 
 public class FitAdapter extends RecyclerView.Adapter<FitAdapter.RecyclerViewHolder> {
     private static final String TAG = "FIT_TEST";

@@ -1,29 +1,17 @@
 package com.example.trungnguyen.healthcare2.main;
 
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.IBinder;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 import com.example.trungnguyen.healthcare2.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.Scopes;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Scope;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.fitness.Fitness;
 import com.google.android.gms.fitness.FitnessStatusCodes;
 import com.google.android.gms.fitness.data.DataType;
@@ -37,8 +25,6 @@ import java.util.concurrent.TimeUnit;
 
 public class MyService extends Service {
     public static final String TAG = "ServiceFit";
-    private GoogleApiClient mClient, mClient2;
-    private ServiceCallbacks serviceCallbacks;
 
     public MyService() {
     }
@@ -62,7 +48,7 @@ public class MyService extends Service {
                 new Intent(getApplicationContext(), MyBroadcastReceiver.class), PendingIntent.FLAG_UPDATE_CURRENT);
         Fitness.HistoryApi.registerDataUpdateListener(MainActivity4.getGoogleApiClient(),
                 new DataUpdateListenerRegistrationRequest.Builder()
-                        .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
+                        .setDataType(DataType.TYPE_HEIGHT)
                         .setPendingIntent(pendingIntent)
                         .build())
                 .setResultCallback(status -> {

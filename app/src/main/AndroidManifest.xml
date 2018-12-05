@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainActivity4"
+        <activity
+            android:name=".main.MainActivity2"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +27,14 @@
         <service
             android:name=".main.MyService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW" />
+
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.cumulative" />
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.delta" />
+            </intent-filter>
+        </service>
         <receiver android:name=".main.MyBroadcastReceiver" />
     </application>
 
