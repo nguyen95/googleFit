@@ -52,6 +52,7 @@ public class FitUtil {
                     GoogleSignIn.getLastSignedInAccount(activity),
                     fitnessOptions);
         } else {
+            ///kokokokoooooooo
             onAccessListener.onAccessGoogleFit();
         }
     }
